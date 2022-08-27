@@ -15,11 +15,11 @@ if( isset($_SESSION['s_username'])  ) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="../assets/css/paoloBootstrap.css" />
     <link rel="stylesheet" href="../assets/css/sweetalert2.min.css" />
-    <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="../assets//css/stars.css" />
 </head>
 
 <body>
+
     <div id='stars'></div>
     <div id='stars2'></div>
     <div id='stars3'></div>
@@ -28,15 +28,14 @@ if( isset($_SESSION['s_username'])  ) {
 
         <div class="row col-md-4 col-10 justify-content-center bg-dark d-flex flex-column shadow">
             <h1 class="shadow-text text-white display-4 ">Login</h1>
-            <form id="loginForm" class="form-group container" onsubmit="" method="POST">
+            <form id="loginForm" class="form-group container">
                 <label for="username">Username</label>
                 <input type="text" class="form-control" name="username" id="username" placeholder="username">
                 <label for="password">Password</label>
                 <input type="password" class="form-control" name="password" id="password" placeholder="password">
                 <a href="" class="form-text text-cyan text-decoration-none">forgot your password?</a>
                 <div class="input-group w-100 align-items-center justify-content-around flex-column gap-4 mt-3">
-                    <button type="submit" class="btn btn-success shadow-box-1 col-8">Login</button>
-                   
+                    <button class="btn btn-success shadow-box-1 col-8">Login</button>
                 </div>
             </form>
         </div>

@@ -1,5 +1,6 @@
 $("#loginForm").submit(function (e) {
   e.preventDefault();
+
   const username = $("#username").val() || null;
   const password = $("#password").val() || null;
 
@@ -15,7 +16,7 @@ $("#loginForm").submit(function (e) {
   } else {
     $.ajax({
       type: "POST",
-      url: "bd/login.php",
+      url: "../bd/login.php",
       datatype: "json",
       data: {
         username: username,
@@ -36,7 +37,7 @@ $("#loginForm").submit(function (e) {
           }).then((result) => {
             $("#username").val("");
             $("#password").val("");
-            window.location.href = "views/";
+            window.location.href = "./";
           });
         } else {
           Swal.fire({
@@ -55,6 +56,3 @@ $("#loginForm").submit(function (e) {
   }
 });
 
-function logout () {
-    window.location.href = "../bd/logout.php";
-}
